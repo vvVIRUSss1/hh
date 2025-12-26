@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>فمبلا | Official Links</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020024);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ===== نجوم متحركة ===== */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: starMove linear infinite;
+}
+@keyframes starMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1200px); }
+}
+
+/* ===== الحاوية ===== */
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding-top: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== صورة شخصية + إطار نيون ===== */
+.avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.avatar::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: linear-gradient(45deg,#00d4ff,#5865F2,#ff00ff);
+  filter: blur(10px);
+  animation: neon 4s linear infinite;
+}
+@keyframes neon {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== العنوان ===== */
+h1 {
+  margin-top: 15px;
+  font-size: 34px;
+}
+p {
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/* ===== العداد ===== */
+.counter {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* ===== الأزرار ===== */
+a {
+  display: block;
+  width: 80%;
+  margin: 12px auto;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+.discord {
+  background: #5865F2;
+  animation: shake 2s infinite;
+}
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+.insta { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+.telegram { background: #229ED9; }
+
+/* ===== الفوتر ===== */
+.footer {
+  margin-top: 40px;
+  font-size: 13px;
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- الصورة -->
+  <div class="avatar">
+    <img src="https://i.ibb.co/R4h9zpqy/fmbla.png" alt="فمبلا">
+  </div>
+
+  <h1>🎮 فمبلا</h1>
+  <p>Gaming Content • Community • Fun</p>
+
+  <div class="counter">🔥 أكثر من 10,000 لاعب معنا</div>
+
+  <a class="discord" href="https://discord.gg/VAq9uMX5V" target="_blank">
+    🚀 انضم لسيرفر الديسكورد
+  </a>
+
+  <a class="insta" href="https://www.instagram.com/fmbla1" target="_blank">
+    📸 حسابي انستغرام
+  </a>
+
+  <a class="telegram" href="https://t.me/M1_2M" target="_blank">
+    ✈️ حسابي تليجرام
+  </a>
+
+  <div class="footer">
+    © 2025 فمبلا | Official Links
+  </div>
+
+</div>
+
+<script>
+// إنشاء نجوم بالخلفية
+for(let i=0;i<60;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.width=Math.random()*3+2+"px";
+  s.style.height=s.style.width;
+  s.style.left=Math.random()*window.innerWidth+"px";
+  s.style.top=Math.random()*window.innerHeight+"px";
+  s.style.animationDuration=(5+Math.random()*10)+"s";
+  document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
